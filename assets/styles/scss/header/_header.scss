@@ -1,0 +1,32 @@
+.nav-header {
+   display: flex;
+   align-items: center;
+   justify-content: end;
+
+   a {
+    color: $white;
+    &:hover {
+        color: $orange;
+    }
+   }
+
+   .btn-simule-rcpm {
+        @include flex-center;
+
+        a {
+            padding: 0;
+
+            button {
+                border: solid 1px $white;
+                border-radius: 0;
+                color: $white;
+                font-size: 12px;
+
+                &:hover {
+                    color: $orange;
+                    border-color: $orange;
+                }
+            }
+        }
+   }
+}

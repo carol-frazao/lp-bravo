@@ -1,0 +1,35 @@
+@mixin for-min-xxl {
+    @media (min-width: $breakpoint-xxl) {
+        @content
+    }
+};
+
+@mixin for-min-xl {
+    @media (min-width: $breakpoint-xl) {
+        @content
+    }
+};
+
+@mixin for-min-lg {
+    @media (min-width: $breakpoint-lg) {
+        @content
+    }
+};
+
+@mixin for-min-md {
+    @media (min-width: $breakpoint-md) {
+        @content
+    }
+};
+
+@mixin for-min-sm {
+    @media (min-width: $breakpoint-sm) {
+        @content
+    }
+};
+
+@mixin for-min-xs {
+    @media (min-width: $breakpoint-xs) {
+        @content
+    }
+}
