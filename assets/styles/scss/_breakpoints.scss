@@ -1,3 +1,4 @@
+// ** for Min width
 @mixin for-min-xxl {
     @media (min-width: $breakpoint-xxl) {
         @content
@@ -32,4 +33,41 @@
     @media (min-width: $breakpoint-xs) {
         @content
     }
-}
+};
+
+// ** for Max width
+@mixin for-max-xxl {
+    @media (max-width: $breakpoint-xxl) {
+        @content
+    }
+};
+
+@mixin for-max-xl {
+    @media (max-width: $breakpoint-xl) {
+        @content
+    }
+};
+
+@mixin for-max-lg {
+    @media (max-width: $breakpoint-lg) {
+        @content
+    }
+};
+
+@mixin for-max-md {
+    @media (max-width: $breakpoint-md) {
+        @content
+    }
+};
+
+@mixin for-max-sm {
+    @media (max-width: $breakpoint-sm) {
+        @content
+    }
+};
+
+@mixin for-max-xs {
+    @media (max-width: $breakpoint-xs) {
+        @content
+    }
+};

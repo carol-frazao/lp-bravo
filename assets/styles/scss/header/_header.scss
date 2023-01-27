@@ -1,32 +1,85 @@
-.nav-header {
-   display: flex;
-   align-items: center;
-   justify-content: end;
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 
-   a {
-    color: $white;
-    &:hover {
-        color: $orange;
+.navbar-header {
+    .navbar-toggler {
+        border: none;
+
+        &:focus {
+            box-shadow: none !important;
+        }
+
+        svg.feather-menu-icon {
+            color: $white;
+            width: 33px;
+            height: 33px;
+            &:hover {
+                color: $orange;
+            }
+        }
     }
-   }
 
-   .btn-simule-rcpm {
-        @include flex-center;
+    .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+
+        @include for-max-lg {
+            .navbar-nav {
+                width: 100%;
+                padding-top: 10px;
+            }
+        }
 
         a {
-            padding: 0;
+            color: $white;
+            cursor: pointer;
 
-            button {
-                border: solid 1px $white;
-                border-radius: 0;
-                color: $white;
-                font-size: 12px;
+            &:hover, &:focus {
+                color: $orange;
+            }
 
-                &:hover {
-                    color: $orange;
-                    border-color: $orange;
+            @include for-max-lg {
+                width: 100%;
+                padding: 8px 1rem;
+            }
+        }
+
+        .btn-simule-rcpm {
+            @include flex-center;
+            @include for-max-lg {
+                width: 100%;
+            }
+
+            a {
+                padding: 0;
+
+                @include for-max-lg {
+                    padding: 0 1rem 5px;
+                }
+
+                button {
+                    border: solid 1px $white;
+                    border-radius: 0;
+                    color: $white;
+                    font-size: 12px;
+                    cursor: pointer;
+
+                    &:hover, &:focus{
+                        color: $orange;
+                        border-color: $orange;
+                    }
+                    @include for-max-lg {
+                        width: 100%;
+                        padding: 10px;
+                        margin-top: 10px;
+                    }
                 }
             }
         }
-   }
+    }
 }
+
