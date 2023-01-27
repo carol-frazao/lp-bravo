@@ -15,11 +15,3 @@ $(document).scroll(function () {
     $(".back-to-top").css("display", "none");
   }
 });
-
-// const scrollToSkills = () => {
-//   if ($(window).width() < 900) {
-//     $("html, body").animate({ scrollTop: $("#skills").offset().top - 90 }, 0);
-//   } else {
-//     $("html, body").animate({ scrollTop: $("#skills").offset().top - 10 }, 0);
-//   }
-// };
