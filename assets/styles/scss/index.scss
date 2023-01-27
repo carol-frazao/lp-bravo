@@ -23,13 +23,17 @@ body {
     font-size: 30px;
     box-shadow: 1px 1px 2px #888;
     z-index: 1000;
-    animation: wpp-move .9s infinite alternate;
+    animation: wpp-move .8s infinite alternate;
 
     @keyframes wpp-move {
         from {
             transform: scale(.75);
+            -webkit-transform: scale(.75);
+            -moz-transform: scale(.75);
         } to {
             transform: scale(.85);
+            -webkit-transform: scale(.85);
+            -moz-transform: scale(.85);
         }
     }
 }
