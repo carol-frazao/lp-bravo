@@ -1,0 +1,101 @@
+.network-container {
+    background-color: $light-strong;
+    padding: 3rem 4rem;
+
+    h1 {
+        @include title-style;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    @include for-max-lg {
+        flex-direction: column;
+
+        .about-us-image {
+            text-align: center;
+        }
+        .about-us-description {
+            max-width: 590px;
+            h1 {
+                text-align: center;
+            }
+            b {
+                text-align: center;
+            }
+        }
+    }
+    @include for-max-md {
+        .about-us-description {
+            max-width: 100%;
+        }
+    }
+    @include for-max-sm {
+        gap: 1rem;
+        padding: 2.5rem;
+
+        .about-us-image img {
+            padding: 10px;
+        }
+        .about-us-description {
+            h1 {
+                font-size: 25px;
+                padding-bottom: 0;
+            }
+            p, b {
+                font-size: 14px;
+            }
+        }
+    }
+
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 2.2rem;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    background-color: #4b4b4b6b;
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 10px !important;
+    color: rgb(255, 255, 255) !important;
+    border: solid 1px rgba(255, 255, 255, 0.467);
+    &:hover {
+        color: $orange-strong !important;
+    }
+     &::after {
+        font-size: 25px !important;
+    }
+}
+
+

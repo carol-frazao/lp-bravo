@@ -5,11 +5,83 @@
 
 @import './header/header';
 @import './main/know-more';
-@import './main/about-us';
+@import './main/networks';
 @import './main/products';
 
 body {
     font-family: $font-family-sans-serif;
+}
+
+.simple-container {
+    @include flex-center;
+    padding: 4rem;
+    gap: 2rem;
+    width: 100%;
+    min-height: 95vh;
+    height: 100%;
+
+    .image-section {
+        img {
+            width: 100%;
+            min-width: 250px;
+        }
+    }
+    .description {
+        max-width: 50%;
+
+        h1 {
+            @include title-style;
+            padding-bottom: 10px;
+        }
+        p, b {
+            font-size: 16px;
+            text-align: justify;
+        }
+        b {
+            color: rgb(55, 55, 55);
+        }
+    }
+
+
+    @include for-max-lg {
+        flex-direction: column;
+
+        .about-us-image {
+            text-align: center;
+        }
+        .about-us-description {
+            max-width: 590px;
+            h1 {
+                text-align: center;
+            }
+            b {
+                text-align: center;
+            }
+        }
+    }
+    @include for-max-md {
+        .about-us-description {
+            max-width: 100%;
+        }
+    }
+    @include for-max-sm {
+        gap: 1rem;
+        padding: 2.5rem;
+
+        .about-us-image img {
+            padding: 10px;
+        }
+        .about-us-description {
+            h1 {
+                font-size: 25px;
+                padding-bottom: 0;
+            }
+            p, b {
+                font-size: 14px;
+            }
+        }
+    }
+
 }
 
 .whatsapp-icon-fixed {
