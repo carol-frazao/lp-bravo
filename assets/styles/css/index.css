@@ -249,6 +249,7 @@ header {
   }
 }
 .navbar-header .nav-container .btn-simule-rcpm {
+  margin-left: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -256,6 +257,7 @@ header {
 @media (max-width: 992px) {
   .navbar-header .nav-container .btn-simule-rcpm {
     width: 100%;
+    margin-left: 0;
   }
 }
 .navbar-header .nav-container .btn-simule-rcpm a {

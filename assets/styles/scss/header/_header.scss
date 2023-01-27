@@ -49,9 +49,11 @@ header {
         }
 
         .btn-simule-rcpm {
+            margin-left: 10px;
             @include flex-center;
             @include for-max-lg {
                 width: 100%;
+                margin-left: 0;
             }
 
             a {
