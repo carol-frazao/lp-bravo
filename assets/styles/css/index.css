@@ -360,6 +360,7 @@ header {
   color: #377dc3;
   padding-bottom: 10px;
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 @media (max-width: 992px) {
   .network-container {
@@ -535,18 +536,15 @@ body {
   .simple-container .about-us-image {
     text-align: center;
   }
-  .simple-container .about-us-description {
+  .simple-container .description {
     max-width: 590px;
   }
-  .simple-container .about-us-description h1 {
-    text-align: center;
-  }
-  .simple-container .about-us-description b {
+  .simple-container .description h1, .simple-container .description b {
     text-align: center;
   }
 }
 @media (max-width: 768px) {
-  .simple-container .about-us-description {
+  .simple-container .description {
     max-width: 100%;
   }
 }
@@ -558,12 +556,23 @@ body {
   .simple-container .about-us-image img {
     padding: 10px;
   }
-  .simple-container .about-us-description h1 {
+  .simple-container .description h1 {
     font-size: 25px;
     padding-bottom: 0;
   }
-  .simple-container .about-us-description p, .simple-container .about-us-description b {
+  .simple-container .description p, .simple-container .description b {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  .nosso-time .simple-container p {
+    text-align: center !important;
+  }
+}
+@media (max-width: 576px) {
+  .nosso-time .simple-container p {
+    text-align: start !important;
   }
 }
 
