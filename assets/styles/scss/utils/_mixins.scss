@@ -3,3 +3,9 @@
     align-items: center;
     justify-content: center;
 }
+
+@mixin title-style {
+    font-size: 2rem;
+    text-align: start;
+    color: $primary;
+}

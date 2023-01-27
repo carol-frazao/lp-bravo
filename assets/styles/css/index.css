@@ -356,7 +356,8 @@ header {
   padding: 4rem;
   gap: 2rem;
   width: 100%;
-  height: 95vh;
+  min-height: 95vh;
+  height: 100%;
 }
 .about-us-container .about-us-image img {
   width: 100%;
@@ -403,7 +404,7 @@ header {
 @media (max-width: 576px) {
   .about-us-container {
     gap: 1rem;
-    padding: 2rem;
+    padding: 2.5rem;
   }
   .about-us-container .about-us-image img {
     padding: 10px;
@@ -411,6 +412,63 @@ header {
   .about-us-container .about-us-description h1 {
     font-size: 25px;
     padding-bottom: 0;
+  }
+  .about-us-container .about-us-description p, .about-us-container .about-us-description b {
+    font-size: 14px;
+  }
+}
+
+.produtos {
+  text-align: center;
+  background-color: #f3f3f3;
+  padding: 4rem;
+}
+.produtos .products-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.produtos .products-title h1 {
+  font-size: 2rem;
+  text-align: start;
+  color: #377dc3;
+}
+.produtos .especialidades {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+}
+.produtos .especialidades div {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+.produtos .especialidades div p {
+  text-align: justify;
+  font-size: 14px;
+  padding-top: 10px;
+}
+.produtos .especialidades div img {
+  max-width: 40px;
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .produtos .especialidades {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .produtos .especialidades {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .produtos {
+    padding: 2.5rem;
   }
 }
 

@@ -1,0 +1,52 @@
+.produtos {
+    text-align: center;
+    background-color: #f3f3f3;
+    padding: 4rem;
+
+    .products-title {
+        @include flex-center;
+        width: 100%;
+        h1 {
+            @include title-style;
+        }
+    }
+
+    .especialidades {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin: 2rem 0;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+
+            p {
+                text-align: justify;
+                font-size: 14px;
+                padding-top: 10px;
+            }
+
+            img {
+                max-width: 40px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @include for-max-md {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include for-max-sm {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+    }
+
+    @include for-max-sm {
+        padding: 2.5rem;
+    }
+
+}
