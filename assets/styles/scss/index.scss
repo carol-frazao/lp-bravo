@@ -1,10 +1,11 @@
-@import './variables';
-@import './mixins';
-@import './breakpoints';
-@import './global';
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/breakpoints';
+@import './utils/global';
 
 @import './header/header';
 @import './main/saiba-mais';
+@import './main/about-us';
 
 body {
     font-family: $font-family-sans-serif;
