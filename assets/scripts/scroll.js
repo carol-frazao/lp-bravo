@@ -6,15 +6,15 @@ const scrollar = (section) => {
   $("html, body").animate({ scrollTop: target_top - 60 }, 0);
 };
 
-// $(document).scroll(function () {
-//   const topo = $(document).scrollTop(); // obtem a quantidade de scroll no momento
+$(document).scroll(function () {
+  const topo = $(document).scrollTop(); // obtem a quantidade de scroll no momento
 
-//   if (posicaoInicial("#sobre-nos") + 100 < topo) {
-//     $(".back-to-top").css("display", "block");
-//   } else {
-//     $(".back-to-top").css("display", "none");
-//   }
-// });
+  if (posicaoInicial("#inicio") + 100 < topo) {
+    $(".back-to-top").css("display", "block");
+  } else {
+    $(".back-to-top").css("display", "none");
+  }
+});
 
 // const scrollToSkills = () => {
 //   if ($(window).width() < 900) {
