@@ -92,6 +92,7 @@ header {
                 padding: 10px;
                 margin-top: 10px;
                 font-weight: 500;
+                font-size: 16px;
             }
         }
     }
@@ -115,7 +116,7 @@ header {
 
   .overlay-content {
     position: relative;
-    top: 20%;
+    top: 17%;
     width: 100%;
     text-align: start;
   }
@@ -125,9 +126,9 @@ header {
     width: 50%;
 
     a {
-        padding: 8px;
+        padding: 10px;
         text-decoration: none;
-        font-size: 20px;
+        font-size: 24px;
         color: $light;
         display: block;
         transition: 0.3s;
