@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .color-white {
   color: #fff !important;
 }
@@ -618,7 +617,7 @@ header {
   padding: 8px 30px;
   margin-top: 0.6rem;
   transition: 0.4s all;
-  box-shadow: 1px 1px 2px rgba(87, 87, 87, 0.233);
+  box-shadow: 1px 1px 2px rgba(87, 87, 87, 0.326);
   border-radius: 1px;
 }
 .btn-simular-rcpm:hover {
@@ -675,10 +674,19 @@ header {
 }
 
 .simulacao-rcpm {
-  height: 100vh;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding: 5rem;
+}
+@media (max-width: 576px) {
+  .simulacao-rcpm {
+    padding: 3rem;
+  }
 }
 .simulacao-rcpm .simulacao-container {
   display: flex;
@@ -686,6 +694,7 @@ header {
   justify-content: center;
   flex-direction: column;
   height: 100%;
+  width: 100%;
 }
 .simulacao-rcpm .simulacao-container .form-simulacao {
   display: flex;
@@ -693,14 +702,32 @@ header {
   justify-content: center;
   flex-direction: column;
   gap: 10px;
-  width: 50%;
+  width: 100%;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .simulacao-rcpm .simulacao-container .form-simulacao {
+    width: 80%;
+  }
+}
+@media (min-width: 992px) {
+  .simulacao-rcpm .simulacao-container .form-simulacao {
+    width: 60%;
+  }
 }
 .simulacao-rcpm .simulacao-container .form-simulacao input, .simulacao-rcpm .simulacao-container .form-simulacao select {
   width: 100%;
   outline: none;
   border: none;
-  padding: 5px 10px;
-  border-radius: 2px;
+  padding: 7px 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.simulacao-rcpm .simulacao-container .form-simulacao button {
+  width: 100%;
+}
+.simulacao-rcpm .simulacao-container .form-simulacao button:hover {
+  transform: none !important;
 }
 .simulacao-rcpm #title-simulacao h1 {
   color: white !important;
@@ -788,6 +815,73 @@ body {
   }
 }
 
+footer {
+  background-color: #377dc3;
+  padding: 3rem;
+  position: relative;
+}
+@media (max-width: 576px) {
+  footer {
+    padding: 2rem 15px;
+  }
+}
+footer .footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+footer .footer-container span {
+  color: #fff;
+}
+@media (max-width: 576px) {
+  footer .footer-container {
+    gap: 14px;
+  }
+  footer .footer-container span {
+    font-size: 14px;
+  }
+  footer .footer-container span img {
+    max-width: 17px;
+  }
+}
+@media (max-width: 400px) {
+  footer .footer-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 0;
+  }
+}
+footer .back-to-top {
+  background: #ff9f43;
+  border-radius: 50%;
+  min-width: 45px;
+  min-height: 45px;
+  box-shadow: 0px 0px 5px 2px rgba(149, 148, 148, 0.1);
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  border: solid 3px #ff9f43;
+  position: absolute;
+  bottom: 78%;
+  left: 49%;
+}
+footer .back-to-top:active {
+  background-color: #377dc3;
+}
+@media (max-width: 576px) {
+  footer .back-to-top {
+    left: 45%;
+  }
+}
+footer .back-to-top .chevron-up {
+  font-size: 16px;
+  color: white;
+  position: absolute;
+  left: 29%;
+  top: 29%;
+}
+
 .whatsapp-icon-fixed {
   position: fixed;
   width: 60px;
@@ -826,50 +920,5 @@ body {
     transform: scale(0.85);
     -webkit-transform: scale(0.85);
     -moz-transform: scale(0.85);
-  }
-}
-
-.back-to-top {
-  display: none;
-  background: #ff9f43;
-  border-radius: 50%;
-  bottom: 1rem;
-  right: 50%;
-  width: 40px;
-  height: 40px;
-  z-index: 1000;
-  box-shadow: 0px 0px 5px 2px rgba(149, 148, 148, 0.1);
-  color: white;
-  cursor: pointer;
-  position: fixed;
-  animation: back-to-top 0.5s infinite alternate-reverse;
-  text-decoration: none;
-  border: solid 3px #ff9f43;
-}
-.back-to-top::after {
-  content: "▲";
-  font-size: 16px;
-  color: white;
-  position: relative;
-  left: 11px;
-  top: 3px;
-}
-.back-to-top:active {
-  background-color: #1a1a1a;
-}
-@-webkit-keyframes back-to-top {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(8px);
-  }
-}
-@keyframes back-to-top {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(8px);
   }
 }

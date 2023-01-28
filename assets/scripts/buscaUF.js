@@ -8,6 +8,7 @@ window.addEventListener('load', async () => {
 
     response.forEach((uf) => {
         options.innerHTML += '<option>' + uf.sigla + '</option>'
+        // options.setAttribute('label', 'Selecione')
     })
     uf.append(options)
 });
@@ -23,4 +24,3 @@ uf.addEventListener("change", async () => {
     })
     cidade.innerHTML = options
 })
-
