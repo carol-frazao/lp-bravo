@@ -6,7 +6,6 @@ window.addEventListener('load', async () => {
     const response = await request.json();
     const options = document.createElement("optgroup")
 
-    // options.setAttribute('label', 'UFs')
     response.forEach((uf) => {
         options.innerHTML += '<option>' + uf.sigla + '</option>'
     })
