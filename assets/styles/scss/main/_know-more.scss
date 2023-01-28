@@ -24,7 +24,7 @@
         padding: 0 2rem;
         font-size: 50px;
 
-        @include for-max-xl{
+        @include for-max-xl {
             font-size: 45px;
         }
         @include for-max-lg {

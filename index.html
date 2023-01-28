@@ -64,7 +64,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="#" onclick="scrollar('#footer')">
                   Contatos
                 </a>
               </li>
@@ -281,7 +281,7 @@
           </span>
 
           <span>
-            <button class="btn-simular-rcpm">
+            <button class="btn-simular-rcpm" onclick="scrollar('#simulacao-rcpm')">
               SIMULE SEU RCPM
             </button>
           </span>
@@ -304,7 +304,7 @@
             </span>
 
             <span>
-              <button class="btn-simular-rcpm">
+              <button class="btn-simular-rcpm" onclick="scrollar('#simulacao-rcpm')">
                 FAÇA AGORA UMA SIMULAÇÃO
               </button>
             </span>
@@ -364,7 +364,7 @@
 
           <form action="" name="simulacao" class="form-simulacao">
             <input type="text" id="name" name="name" placeholder="Seu nome">
-            <input type="number" id="property-value" name="property-value" placeholder="Valor do imóvel">
+            <input type="text" id="property-value" name="property-value" placeholder="Valor do imóvel">
             <select name="estados" id="estados" onchange="e => onChange(e)">
               <option value="" disabled selected> Estado </option>
             </select>
@@ -376,7 +376,7 @@
         </div>
       </section>
 
-      <footer>
+      <footer id="footer">
         <a class="back-to-top" onclick="scrollar('#inicio');">
           <i class="fa fa-chevron-up chevron-up"></i>
         </a>
@@ -415,16 +415,25 @@
 
     </main>
 
+    <!-- imports -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/scripts/scroll.js"></script>
     <script type="text/javascript" src="./assets/scripts/swiper.js"></script>
     <script type="text/javascript" src="./assets/scripts/buscaUF.js"></script>
-    <script>
+
+    <!-- my scripts-->
+    <script type="text/javascript">
       feather.replace();
     </script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#property-value').mask('000.000.000.000.000,00', {reverse: true});
+      });
+    </script>
+
   </body>
 </html>
