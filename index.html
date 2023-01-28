@@ -29,19 +29,48 @@
           <button
             class="navbar-toggler btn-nav-responsive"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+            id="openNav"
           >
             <i data-feather="menu" class="feather-menu-icon"></i>
           </button>
 
-          <div
-            class="collapse navbar-collapse nav-container"
-            id="navbarSupportedContent"
-          >
+          <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
+            <ul class="overlay-content navbar-nav">
+              <li class="nav-item" onclick="scrollar('#about-us')">
+                <a class="nav-link link-about-us">
+                  Sobre nós
+                </a>
+              </li>
+              <li class="nav-item" onclick="scrollar('#products')">
+                <a class="nav-link link-produtos">
+                  Produtos
+                </a>
+              </li>
+              <li class="nav-item" onclick="scrollar('#our-team')">
+                <a class="nav-link link-nosso-time">
+                  Nosso time
+                </a>
+              </li>
+              <li class="nav-item" onclick="scrollMore('#rcpm')">
+                <a class="nav-link link-rcpm">
+                  RCPM
+                </a>
+              </li>
+              <li class="nav-item" onclick="scrollar('#footer')">
+                <a class="nav-link link-contatos">
+                  Contatos
+                </a>
+              </li>
+              <li class="nav-item btn-simule-rcpm" onclick="scrollMore('#simulacao-rcpm')">
+                <a class="nav-link link-simulacao">
+                  <button class="btn"> SIMULE SEU RCPM </button>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="navbar-collapse nav-container">
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item" onclick="scrollar('#about-us')">
                 <a class="nav-link link-about-us">
@@ -420,6 +449,7 @@
     <script type="text/javascript" src="./assets/scripts/swiper.js"></script>
     <script type="text/javascript" src="./assets/scripts/buscaUF.js"></script>
     <script type="text/javascript" src="./assets/scripts/changeColor.js"></script>
+    <script type="text/javascript" src="./assets/scripts/menuResponsive.js"></script>
 
     <!-- my scripts-->
     <script type="text/javascript">

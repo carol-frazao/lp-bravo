@@ -240,7 +240,7 @@ header {
   color: #fff;
   cursor: pointer;
 }
-.navbar-header .nav-container a:hover, .navbar-header .nav-container a:focus {
+.navbar-header .nav-container a:hover {
   color: #ff9f43;
 }
 @media (max-width: 992px) {
@@ -249,45 +249,125 @@ header {
     padding: 8px 1rem;
   }
 }
-.navbar-header .nav-container .btn-simule-rcpm {
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    display: none !important;
+  }
+}
+.btn-simule-rcpm {
   margin-left: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 @media (max-width: 992px) {
-  .navbar-header .nav-container .btn-simule-rcpm {
-    width: 100%;
+  .btn-simule-rcpm {
+    width: 100% !important;
     margin-left: 0;
+    padding: 10px 0 !important;
   }
 }
-.navbar-header .nav-container .btn-simule-rcpm a {
+.btn-simule-rcpm a {
   padding: 0;
+  text-align: center;
 }
 @media (max-width: 992px) {
-  .navbar-header .nav-container .btn-simule-rcpm a {
-    padding: 0 1rem 5px;
+  .btn-simule-rcpm a {
+    width: 100%;
+    padding: 0 3rem !important;
   }
 }
-.navbar-header .nav-container .btn-simule-rcpm a button {
+.btn-simule-rcpm a button {
   border: solid 1px #fff;
   border-radius: 0;
   color: #fff;
   font-size: 12px;
+  max-width: 100%;
   cursor: pointer;
 }
-.navbar-header .nav-container .btn-simule-rcpm a button:hover, .navbar-header .nav-container .btn-simule-rcpm a button:focus {
+.btn-simule-rcpm a button:hover, .btn-simule-rcpm a button:focus {
   color: #ff9f43;
   border-color: #ff9f43;
 }
 @media (max-width: 992px) {
-  .navbar-header .nav-container .btn-simule-rcpm a button {
+  .btn-simule-rcpm a button {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
+    font-weight: 500;
   }
 }
 
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #377dc3;
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+@media (min-width: 992px) {
+  .overlay {
+    display: none;
+  }
+}
+
+.overlay-content {
+  position: relative;
+  top: 20%;
+  width: 100%;
+  text-align: start;
+}
+
+.overlay li {
+  padding-left: 3rem;
+  width: 50%;
+}
+.overlay li a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f6f6f6;
+  display: block;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.overlay li a:hover, .overlay a:focus {
+  color: #ff9f43;
+  cursor: pointer;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.closebtn {
+  text-decoration: none;
+  z-index: 1001;
+  color: #f6f6f6;
+}
+.closebtn:hover {
+  color: #ff9f43;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay li a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
 .saiba-mais {
   height: 100vh;
   width: 100%;

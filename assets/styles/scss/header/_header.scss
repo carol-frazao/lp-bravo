@@ -39,7 +39,7 @@ header {
             color: $white;
             cursor: pointer;
 
-            &:hover, &:focus {
+            &:hover {
                 color: $orange;
             }
 
@@ -48,41 +48,118 @@ header {
                 padding: 8px 1rem;
             }
         }
+    }
+}
 
-        .btn-simule-rcpm {
-            margin-left: 10px;
-            @include flex-center;
+@include for-max-lg {
+    .navbar-collapse  {
+        display: none !important;
+    }
+}
+
+.btn-simule-rcpm {
+    margin-left: 10px;
+    @include flex-center;
+    @include for-max-lg {
+        width: 100% !important;
+        margin-left: 0;
+        padding: 10px 0 !important;
+    }
+
+    a {
+        padding: 0;
+        text-align: center;
+
+        @include for-max-lg {
+            width: 100%;
+            padding: 0 3rem !important;
+        }
+
+        button {
+            border: solid 1px $white;
+            border-radius: 0;
+            color: $white;
+            font-size: 12px;
+            max-width: 100%;
+            cursor: pointer;
+
+            &:hover, &:focus{
+                color: $orange;
+                border-color: $orange;
+            }
             @include for-max-lg {
                 width: 100%;
-                margin-left: 0;
-            }
-
-            a {
-                padding: 0;
-
-                @include for-max-lg {
-                    padding: 0 1rem 5px;
-                }
-
-                button {
-                    border: solid 1px $white;
-                    border-radius: 0;
-                    color: $white;
-                    font-size: 12px;
-                    cursor: pointer;
-
-                    &:hover, &:focus{
-                        color: $orange;
-                        border-color: $orange;
-                    }
-                    @include for-max-lg {
-                        width: 100%;
-                        padding: 10px;
-                        margin-top: 10px;
-                    }
-                }
+                padding: 10px;
+                margin-top: 10px;
+                font-weight: 500;
             }
         }
     }
 }
 
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: $primary;
+    overflow-y: hidden;
+    transition: 0.5s;
+
+    @include for-min-lg {
+        display: none;
+    }
+  }
+
+  .overlay-content {
+    position: relative;
+    top: 20%;
+    width: 100%;
+    text-align: start;
+  }
+
+  .overlay li {
+    padding-left: 3rem;
+    width: 50%;
+
+    a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 20px;
+        color: $light;
+        display: block;
+        transition: 0.3s;
+        font-weight: 500;
+    }
+  }
+  .overlay li a:hover, .overlay a:focus {
+    color: $orange;
+    cursor: pointer;
+  }
+
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+
+  .closebtn {
+    text-decoration: none;
+    z-index: 1001;
+    color: $light;
+    &:hover {
+        color: $orange;
+    }
+  }
+
+  @media screen and (max-height: 450px) {
+    .overlay li a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
