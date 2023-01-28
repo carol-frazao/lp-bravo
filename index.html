@@ -17,7 +17,7 @@
     <header class="bg-blue">
       <nav class="navbar navbar-header navbar-expand-lg w-100">
         <div class="container-fluid">
-          <a class="navbar-brand" href="https://carol-frazao.github.io/lp-bravo">
+          <a class="navbar-brand" href="index.html">
             <img
               src="./assets/images/logo/Bravo_Branco_Laranja_Transparente.png"
               alt="Bravo Brasil"
@@ -52,8 +52,8 @@
                   Nosso time
                 </a>
               </li>
-              <li class="nav-item-overlay" onclick="scrollMore('#rcpm')">
-                <a class="nav-link link-rcpm">
+              <li class="nav-item-overlay">
+                <a class="nav-link link-rcpm" href="rcpm.html">
                   RCPM
                 </a>
               </li>
@@ -62,8 +62,8 @@
                   Contatos
                 </a>
               </li>
-              <li class="nav-item-overlay btn-simule-rcpm" onclick="scrollMore('#simulacao-rcpm')">
-                <a class="nav-link link-simulacao">
+              <li class="nav-item-overlay btn-simule-rcpm">
+                <a class="nav-link link-simulacao" href="rcpm.html">
                   <button class="btn"> SIMULE SEU RCPM </button>
                 </a>
               </li>
@@ -87,8 +87,8 @@
                   Nosso time
                 </a>
               </li>
-              <li class="nav-item" onclick="scrollMore('#rcpm')">
-                <a class="nav-link link-rcpm">
+              <li class="nav-item">
+                <a class="nav-link link-rcpm" href="rcpm.html">
                   RCPM
                 </a>
               </li>
@@ -97,8 +97,8 @@
                   Contatos
                 </a>
               </li>
-              <li class="nav-item btn-simule-rcpm" onclick="scrollMore('#simulacao-rcpm')">
-                <a class="nav-link link-simulacao">
+              <li class="nav-item btn-simule-rcpm">
+                <a class="nav-link link-simulacao" href="rcpm.html">
                   <button class="btn"> SIMULE SEU RCPM </button>
                 </a>
               </li>
@@ -293,114 +293,6 @@
         </div>
       </section>
 
-      <section class="rcpm" id="rcpm" style="background-image: url('./assets/images/backgrounds/rcpm_construction-workers.png')">
-        <div class="rcpm-container">
-          <span class="rcpm-slogan"> RCPM é na Bravo! </span>
-
-          <span class="rcpm-description">
-            <p>
-              O seguro RCPM é aquele que vai proteger o comprador de possíveis danos físicos ao imóvel recém-adquirido.
-              Atualmente, esse seguro é pré-requisito para que um imóvel seja vendido pelo programa habitacional Minha Casa,
-              Minha Vida (MCMV) tanto na Caixa Econômica quanto no Banco do Brasil.
-            </p>
-          </span>
-
-          <span>
-            <button class="btn-simular-rcpm" onclick="scrollar('#simulacao-rcpm')">
-              SIMULE SEU RCPM
-            </button>
-          </span>
-        </div>
-      </section>
-
-      <section class="rcpm-2">
-        <div class="rcpm-container">
-          <div class="know-rcpm">
-            <span class="know-rcpm-title">
-              Conheça o RCPM - Responsabilidade Civil, Profissional e Material
-            </span>
-
-            <span class="rcpm-description">
-              <p>
-                O seguro RCPM é aquele que vai proteger o comprador de possíveis danos físicos ao imóvel recém-adquirido.
-                Atualmente, esse seguro é pré-requisito para que um imóvel seja vendido pelo programa habitacional Minha Casa,
-                Minha Vida (MCMV) tanto na Caixa Econômica quanto no Banco do Brasil.
-              </p>
-            </span>
-
-            <span>
-              <button class="btn-simular-rcpm" onclick="scrollar('#simulacao-rcpm')">
-                FAÇA AGORA UMA SIMULAÇÃO
-              </button>
-            </span>
-          </div>
-
-          <div class="know-rcpm-image">
-            <img src="./assets/images/sections/bricklayer-worker.png" alt="">
-          </div>
-        </div>
-      </section>
-
-      <section class="rcpm-coberturas" id='coberturas'>
-        <div class="coberturas-container">
-          <span class="title-section title-coberturas">
-            <h1> Principais coberturas </h1>
-          </span>
-
-          <div class="grid-coberturas">
-            <div class="cobertura-card">
-              <img src="./assets/images/rcpm/01_impermeabilizacao.png" alt="Impermeabilizacão">
-              <span> Impermeabilizacão e infiltrações </span>
-            </div>
-
-            <div class="cobertura-card">
-              <img src="./assets/images/rcpm/02_trincas.png" alt="Fissuras">
-              <span> Trincas e fissuras </span>
-            </div>
-
-            <div class="cobertura-card">
-              <img src="./assets/images/rcpm/03_pintura.png" alt="Pintura">
-              <span> Pintura </span>
-            </div>
-
-            <div class="cobertura-card">
-              <img src="./assets/images/rcpm/04_eletrica.png" alt="Elétrica">
-              <span> Elétrica </span>
-            </div>
-
-            <div class="cobertura-card">
-              <img src="./assets/images/rcpm/05_encanamento.png" alt="Encanamento">
-              <span> Encanamento </span>
-            </div>
-
-            <div class="cobertura-card">
-              <img src="./assets/images/rcpm/06_reparos.png" alt="Reparos">
-              <span> Reparos </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="simulacao-rcpm" id="simulacao-rcpm" style="background-image: url('./assets/images/backgrounds/simuleRcpm_bricklayer-worker-bg-blue.png')">
-        <div class="simulacao-container">
-          <span class="title-section" id="title-simulacao">
-            <h1> Simule agora o seu RCPM  </h1>
-          </span>
-
-          <form action="" name="simulacao" class="form-simulacao">
-            <input type="text" id="name" name="name" placeholder="Seu nome" required>
-            <input type="text" id="property-value" name="property-value" placeholder="Valor do imóvel" required>
-            <select name="estados" id="estados" required>
-              <option value='' disabled selected> Estado </option>
-            </select>
-            <select name="municipios" id="municipios" required>
-              <option value="" disabled selected> Cidade </option>
-            </select>
-            <button type='submit' class="btn-simular-rcpm"> SIMULAR </button>
-          </form>
-        </div>
-      </section>
-
       <footer id="footer">
         <a class="back-to-top" onclick="scrollar('#inicio');">
           <i class="fa fa-chevron-up chevron-up"></i>
@@ -443,24 +335,15 @@
     <!-- imports -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/scripts/scroll.js"></script>
     <script type="text/javascript" src="./assets/scripts/swiper.js"></script>
-    <script type="text/javascript" src="./assets/scripts/buscaUF.js"></script>
-    <script type="text/javascript" src="./assets/scripts/changeColor.js"></script>
+    <script type="text/javascript" src="./assets/scripts/changeLink.js"></script>
     <script type="text/javascript" src="./assets/scripts/menuResponsive.js"></script>
 
     <!-- my scripts-->
     <script type="text/javascript">
       feather.replace();
     </script>
-
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $('#property-value').mask('000.000.000.000.000,00', {reverse: true});
-      });
-    </script>
-
   </body>
 </html>
