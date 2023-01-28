@@ -43,37 +43,33 @@
             id="navbarSupportedContent"
           >
             <ul class="navbar-nav mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="#" onclick="scrollar('#about-us')">
+              <li class="nav-item" onclick="scrollar('#about-us')">
+                <a class="nav-link link-about-us">
                   Sobre nós
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" onclick="scrollar('#products')">
+              <li class="nav-item" onclick="scrollar('#products')">
+                <a class="nav-link link-produtos">
                   Produtos
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" onclick="scrollar('#our-team')">
+              <li class="nav-item" onclick="scrollar('#our-team')">
+                <a class="nav-link link-nosso-time">
                   Nosso time
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" onclick="scrollar('#rcpm')">
+              <li class="nav-item" onclick="scrollMore('#rcpm')">
+                <a class="nav-link link-rcpm">
                   RCPM
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" onclick="scrollar('#footer')">
+              <li class="nav-item" onclick="scrollar('#footer')">
+                <a class="nav-link link-contatos">
                   Contatos
                 </a>
               </li>
-              <li class="nav-item btn-simule-rcpm">
-                <a
-                  class="nav-link"
-                  href="#"
-                  onclick="scrollar('#simulacao-rcpm')"
-                >
+              <li class="nav-item btn-simule-rcpm" onclick="scrollMore('#simulacao-rcpm')">
+                <a class="nav-link link-simulacao">
                   <button class="btn"> SIMULE SEU RCPM </button>
                 </a>
               </li>
@@ -363,12 +359,12 @@
           </span>
 
           <form action="" name="simulacao" class="form-simulacao">
-            <input type="text" id="name" name="name" placeholder="Seu nome">
-            <input type="text" id="property-value" name="property-value" placeholder="Valor do imóvel">
-            <select name="estados" id="estados" onchange="e => onChange(e)">
-              <option value="" disabled selected> Estado </option>
+            <input type="text" id="name" name="name" placeholder="Seu nome" required>
+            <input type="text" id="property-value" name="property-value" placeholder="Valor do imóvel" required>
+            <select name="estados" id="estados" required>
+              <option value='' disabled selected> Estado </option>
             </select>
-            <select name="municipios" id="municipios">
+            <select name="municipios" id="municipios" required>
               <option value="" disabled selected> Cidade </option>
             </select>
             <button type='submit' class="btn-simular-rcpm"> SIMULAR </button>
@@ -423,6 +419,7 @@
     <script type="text/javascript" src="assets/scripts/scroll.js"></script>
     <script type="text/javascript" src="./assets/scripts/swiper.js"></script>
     <script type="text/javascript" src="./assets/scripts/buscaUF.js"></script>
+    <script type="text/javascript" src="./assets/scripts/changeColor.js"></script>
 
     <!-- my scripts-->
     <script type="text/javascript">

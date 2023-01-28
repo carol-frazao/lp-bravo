@@ -497,7 +497,8 @@ header {
 }
 
 .rcpm {
-  height: 95vh;
+  min-height: 100vh;
+  height: 100%;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -550,7 +551,7 @@ header {
 }
 
 .rcpm-2 {
-  padding: 3rem;
+  padding: 3rem 3rem 5rem;
 }
 .rcpm-2 .rcpm-container {
   display: flex;
@@ -674,7 +675,8 @@ header {
 }
 
 .simulacao-rcpm {
-  min-height: 70vh;
+  min-height: 90vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -695,6 +697,9 @@ header {
   flex-direction: column;
   height: 100%;
   width: 100%;
+}
+.simulacao-rcpm .simulacao-container #title-simulacao h1 {
+  color: white !important;
 }
 .simulacao-rcpm .simulacao-container .form-simulacao {
   display: flex;
@@ -726,13 +731,11 @@ header {
 .simulacao-rcpm .simulacao-container .form-simulacao button {
   width: 100%;
   transition: 0.1s !important;
+  background-color: #ff9f43 !important;
 }
 .simulacao-rcpm .simulacao-container .form-simulacao button:hover {
   transform: none !important;
   box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.222);
-}
-.simulacao-rcpm #title-simulacao h1 {
-  color: white !important;
 }
 
 footer {
@@ -788,6 +791,9 @@ footer .back-to-top {
 }
 footer .back-to-top:active {
   background-color: #377dc3;
+}
+footer .back-to-top:hover {
+  box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.222);
 }
 @media (max-width: 576px) {
   footer .back-to-top {
@@ -855,7 +861,7 @@ body {
   padding: 4rem;
   gap: 2rem;
   width: 100%;
-  min-height: 95vh;
+  min-height: 70vh;
   height: 100%;
 }
 .simple-container .image-section img {

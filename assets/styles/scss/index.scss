@@ -1,7 +1,7 @@
-@import './utils/variables';
-@import './utils/mixins';
-@import './utils/breakpoints';
-@import './utils/global';
+@import './partials/variables';
+@import './partials/mixins';
+@import './partials/breakpoints';
+@import './partials/global';
 
 @import './header/header';
 @import './main/know-more';
@@ -19,7 +19,7 @@ body {
     padding: 4rem;
     gap: 2rem;
     width: 100%;
-    min-height: 95vh;
+    min-height: 70vh;
     height: 100%;
 
     .image-section {
