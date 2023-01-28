@@ -82,6 +82,10 @@ footer {
     z-index: 1000;
     animation: wpp-move .8s infinite alternate;
 
+    a {
+        @include flex-center;
+    }
+
     @keyframes wpp-move {
         from {
             transform: scale(.75);

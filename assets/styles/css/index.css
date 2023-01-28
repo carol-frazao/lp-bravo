@@ -908,6 +908,11 @@ footer .back-to-top .chevron-up {
   -webkit-animation: wpp-move 0.8s infinite alternate;
           animation: wpp-move 0.8s infinite alternate;
 }
+.whatsapp-icon-fixed a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @-webkit-keyframes wpp-move {
   from {
     transform: scale(0.75);
