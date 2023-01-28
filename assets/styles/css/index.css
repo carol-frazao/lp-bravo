@@ -639,9 +639,7 @@ header {
   flex-direction: column;
 }
 .rcpm-coberturas .coberturas-container .title-coberturas h1 {
-  color: #377dc3;
-  font-size: 30px;
-  padding-bottom: 2.5rem;
+  padding-bottom: 2rem;
 }
 .rcpm-coberturas .coberturas-container .grid-coberturas {
   display: grid;

@@ -134,12 +134,8 @@
         @include flex-center;
         flex-direction: column;
 
-        .title-coberturas {
-            h1 {
-                color: $primary;
-                font-size: 30px;
-                padding-bottom: 2.5rem;
-            }
+        .title-coberturas h1 {
+            padding-bottom: 2rem;
         }
 
         .grid-coberturas {
