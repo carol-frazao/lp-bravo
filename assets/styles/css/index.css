@@ -549,7 +549,66 @@ header {
     font-size: 14px;
   }
 }
-.rcpm .rcpm-container .btn-simular-rcpm button {
+
+.rcpm-2 {
+  padding: 3rem;
+}
+.rcpm-2 .rcpm-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.rcpm-2 .rcpm-container .know-rcpm {
+  width: 50%;
+  margin: 1rem 0;
+}
+@media (max-width: 992px) {
+  .rcpm-2 .rcpm-container .know-rcpm {
+    width: 80%;
+  }
+}
+@media (max-width: 576px) {
+  .rcpm-2 .rcpm-container .know-rcpm {
+    width: 100%;
+  }
+}
+.rcpm-2 .rcpm-container .know-rcpm .know-rcpm-title {
+  color: #377dc3;
+  font-size: 30px;
+  font-weight: 500;
+}
+@media (max-width: 576px) {
+  .rcpm-2 .rcpm-container .know-rcpm .know-rcpm-title {
+    font-size: 25px;
+  }
+}
+.rcpm-2 .rcpm-container .know-rcpm p {
+  font-size: 16px;
+  padding-top: 10px;
+  text-align: justify;
+}
+@media (min-width: 992px) {
+  .rcpm-2 .rcpm-container .know-rcpm-image {
+    margin: 1rem 0;
+  }
+}
+.rcpm-2 .rcpm-container .know-rcpm-image img {
+  max-width: 500px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 992px) {
+  .rcpm-2 .rcpm-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.btn-simular-rcpm button {
   width: auto;
   font-size: 14px;
   font-weight: 400;
@@ -562,7 +621,7 @@ header {
   box-shadow: 1px 1px 2px rgba(59, 59, 59, 0.381);
   border-radius: 1px;
 }
-.rcpm .rcpm-container .btn-simular-rcpm button:hover {
+.btn-simular-rcpm button:hover {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
