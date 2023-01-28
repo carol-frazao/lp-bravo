@@ -104,24 +104,22 @@
 }
 
 .btn-simular-rcpm {
-    button {
-        width: auto;
-        font-size: 14px;
-        font-weight: 400;
-        color: $white;
-        background-color: $orange-strong;
-        border: none;
-        padding: 8px 30px;
-        margin-top: .6rem;
-        transition: .4s all;
-        box-shadow: 1px 1px 2px rgba(59, 59, 59, 0.381);
-        border-radius: 1px;
+    width: auto;
+    font-size: 14px;
+    font-weight: 400;
+    color: $white;
+    background-color: $orange-strong;
+    border: none;
+    padding: 8px 30px;
+    margin-top: .6rem;
+    transition: .4s all;
+    box-shadow: 1px 1px 2px rgba(87, 87, 87, 0.233);
+    border-radius: 1px;
 
-        &:hover {
-            transform: scale(1.1);
-            -webkit-transform: scale(1.1);
-            -moz-transform: scale(1.1);
-        }
+    &:hover {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
     }
 }
 
@@ -167,5 +165,37 @@
                 }
             }
         }
+    }
+}
+
+.simulacao-rcpm {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .simulacao-container {
+       @include flex-center;
+       flex-direction: column;
+       height: 100%;
+
+        .form-simulacao {
+            @include flex-center;
+            flex-direction: column;
+            gap: 10px;
+            width: 50%;
+
+            input, select {
+                width: 100%;
+                outline: none;
+                border: none;
+                padding: 5px 10px;
+                border-radius: 2px;
+            }
+        }
+    }
+
+    #title-simulacao h1 {
+        color: white !important;
     }
 }
