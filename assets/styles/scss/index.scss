@@ -30,10 +30,6 @@ body {
     .description {
         max-width: 50%;
 
-        h1 {
-            @include title-style;
-            padding-bottom: 10px;
-        }
         p, b {
             font-size: 16px;
             text-align: justify;
@@ -47,7 +43,7 @@ body {
     @include for-max-lg {
         flex-direction: column;
 
-        .about-us-image {
+        .image-section {
             text-align: center;
         }
         .description {
@@ -66,20 +62,27 @@ body {
         gap: 1rem;
         padding: 2.5rem;
 
-        .about-us-image img {
+        .image-section img {
             padding: 10px;
         }
         .description {
-            h1 {
-                font-size: 25px;
-                padding-bottom: 0;
-            }
             p, b {
                 font-size: 14px;
             }
         }
     }
+}
 
+.title-section {
+    h1 {
+        font-size: 30px;
+        color: $primary;
+        padding-bottom: 10px;
+
+        @include for-max-md {
+            font-size: 25px;
+        }
+    }
 }
 
 .nosso-time {

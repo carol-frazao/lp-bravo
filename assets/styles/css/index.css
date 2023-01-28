@@ -480,12 +480,12 @@ header {
   width: 30px;
   margin-bottom: 10px;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .produtos .especialidades {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .produtos .especialidades {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -627,6 +627,55 @@ header {
   -moz-transform: scale(1.1);
 }
 
+.rcpm-coberturas {
+  padding: 3rem;
+  background-color: #f3f3f3;
+}
+.rcpm-coberturas .coberturas-container {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.rcpm-coberturas .coberturas-container .title-coberturas h1 {
+  color: #377dc3;
+  font-size: 30px;
+  padding-bottom: 2.5rem;
+}
+.rcpm-coberturas .coberturas-container .grid-coberturas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 992px) {
+  .rcpm-coberturas .coberturas-container .grid-coberturas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .rcpm-coberturas .coberturas-container .grid-coberturas {
+    grid-template-columns: 1fr;
+  }
+}
+.rcpm-coberturas .coberturas-container .grid-coberturas div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.rcpm-coberturas .coberturas-container .grid-coberturas div img {
+  max-width: 500px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.rcpm-coberturas .coberturas-container .grid-coberturas div span {
+  font-weight: 450;
+  font-size: 16px;
+}
+
 body {
   font-family: "Montserrat", Helvetica, Arial, serif;
 }
@@ -648,12 +697,6 @@ body {
 .simple-container .description {
   max-width: 50%;
 }
-.simple-container .description h1 {
-  font-size: 2rem;
-  text-align: start;
-  color: #377dc3;
-  padding-bottom: 10px;
-}
 .simple-container .description p, .simple-container .description b {
   font-size: 16px;
   text-align: justify;
@@ -665,7 +708,7 @@ body {
   .simple-container {
     flex-direction: column;
   }
-  .simple-container .about-us-image {
+  .simple-container .image-section {
     text-align: center;
   }
   .simple-container .description {
@@ -685,15 +728,22 @@ body {
     gap: 1rem;
     padding: 2.5rem;
   }
-  .simple-container .about-us-image img {
+  .simple-container .image-section img {
     padding: 10px;
-  }
-  .simple-container .description h1 {
-    font-size: 25px;
-    padding-bottom: 0;
   }
   .simple-container .description p, .simple-container .description b {
     font-size: 14px;
+  }
+}
+
+.title-section h1 {
+  font-size: 30px;
+  color: #377dc3;
+  padding-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .title-section h1 {
+    font-size: 25px;
   }
 }
 

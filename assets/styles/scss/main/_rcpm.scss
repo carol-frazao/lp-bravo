@@ -124,3 +124,52 @@
         }
     }
 }
+
+.rcpm-coberturas {
+    padding: 3rem;
+    background-color: $light-strong;
+
+    .coberturas-container {
+        text-align: center;
+        @include flex-center;
+        flex-direction: column;
+
+        .title-coberturas {
+            h1 {
+                color: $primary;
+                font-size: 30px;
+                padding-bottom: 2.5rem;
+            }
+        }
+
+        .grid-coberturas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+
+            @include for-max-lg {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include for-max-md {
+                grid-template-columns: 1fr;
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                img {
+                    max-width: 500px;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                span {
+                    font-weight: 450;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

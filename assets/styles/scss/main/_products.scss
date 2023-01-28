@@ -36,11 +36,11 @@
             }
         }
 
-        @include for-max-md {
+        @include for-max-lg {
             grid-template-columns: repeat(2, 1fr);
         }
 
-        @include for-max-sm {
+        @include for-max-md {
             grid-template-columns: 1fr;
             gap: 1rem;
         }
