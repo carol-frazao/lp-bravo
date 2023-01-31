@@ -51,27 +51,27 @@
             <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
             <ul class="overlay-content navbar-nav">
               <li class="nav-item-overlay">
-                <a class="nav-link link-inicio" href="#inicio">
+                <a class="nav-link link-inicio" href="#inicio" onfocus="changeColor(this)">
                   Início
                 </a>
               </li>
               <li class="nav-item-overlay">
-                <a class="nav-link link-about-us" href="#about-us">
+                <a class="nav-link link-about-us" href="#about-us" onfocus="changeColor(this)">
                   Sobre nós
                 </a>
               </li>
               <li class="nav-item-overlay">
-                <a class="nav-link link-produtos" href="#products">
+                <a class="nav-link link-produtos" href="#products" onfocus="changeColor(this)">
                   Produtos
                 </a>
               </li>
               <li class="nav-item-overlay">
-                <a class="nav-link link-nosso-time" href="#our-team">
+                <a class="nav-link link-nosso-time" href="#our-team" onfocus="changeColor(this)" >
                   Nosso time
                 </a>
               </li>
               <li class="nav-item-overlay">
-                <a class="nav-link link-contatos" href="#footer">
+                <a class="nav-link link-contatos" href="#footer" onfocus="changeColor(this)">
                   Contatos
                 </a>
               </li>
@@ -87,27 +87,27 @@
           <div class="navbar-collapse nav-container">
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link link-inicio" href="#inicio">
+                <a class="nav-link link-inicio" id="link-inicio" href="#inicio" onfocus="changeColor(this)">
                   Início
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link link-about-us" href="#about-us">
+                <a class="nav-link link-about-us" id="link-about" href="#about-us" onfocus="changeColor(this)">
                   Sobre nós
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link link-produtos" href="#products">
+                <a class="nav-link link-produtos" id="link-produtos" href="#products" onfocus="changeColor(this)">
                   Produtos
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link link-nosso-time" href="#our-team">
+                <a class="nav-link link-nosso-time" id='link-time' href="#our-team" onfocus="changeColor(this)">
                   Nosso time
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link link-contatos" href="#footer">
+                <a class="nav-link link-contatos" id="link-contatos" href="#footer" onfocus="changeColor(this)">
                   Contatos
                 </a>
               </li>
@@ -173,7 +173,7 @@
         <div></div>
       </section>
 
-      <section class="produtos w-100   anime" id="products">
+      <section class="produtos w-100 anime" id="products">
         <div class="especialidades-container">
           <span class="title-section">
             <h1> Especialidades Bravo </h1>
@@ -353,13 +353,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/scripts/scroll.js"></script>
     <script type="text/javascript" src="./assets/scripts/swiper.js"></script>
-    <script type="text/javascript" src="./assets/scripts/changeLink.js"></script>
     <script type="text/javascript" src="./assets/scripts/menuResponsive.js"></script>
+    <script type="text/javascript" src="./assets/scripts/changeColor.js"></script>
     <script type="text/javascript" src="./assets/scripts/leaflet.js"></script>
 
     <!-- my scripts-->
     <script type="text/javascript">
       feather.replace();
     </script>
+
+    <script>
+      const navIndex = document.getElementById('myNav')
+      const allLinks = document.querySelectorAll('.nav-link')
+
+      allLinks.forEach((link) => {
+        link.onclick = () => {
+          navIndex.style.height = "0%";
+        }
+      })
+    </script>
+
   </body>
 </html>

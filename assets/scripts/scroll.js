@@ -1,3 +1,10 @@
+const scrollar = (section) => {
+  var target_offset = $(section).offset();
+  var target_top = target_offset.top;
+  $("html, body").animate({ scrollTop: target_top - 100}, 0);
+};
+
+
 $('.nav-link').click(function(e){
 	e.preventDefault();
 	var id = $(this).attr('href'),
