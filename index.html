@@ -4,13 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bravo Brasil Corretora</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/styles/css/index.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <title>Bravo Brasil Corretora</title>
+    <style>
+      #mapid {
+          height: 300px;
+          width: 50%;
+       }
+    </style>
   </head>
 
   <body class="bg-light">
@@ -34,72 +46,74 @@
             <i data-feather="menu" class="feather-menu-icon"></i>
           </button>
 
+          <!-- for small devices -->
           <div id="myNav" class="overlay">
             <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
             <ul class="overlay-content navbar-nav">
-              <li class="nav-item-overlay" onclick="scrollar('#about-us')">
-                <a class="nav-link link-about-us">
+              <li class="nav-item-overlay">
+                <a class="nav-link link-inicio" href="#inicio">
+                  Início
+                </a>
+              </li>
+              <li class="nav-item-overlay">
+                <a class="nav-link link-about-us" href="#about-us">
                   Sobre nós
                 </a>
               </li>
-              <li class="nav-item-overlay" onclick="scrollar('#products')">
-                <a class="nav-link link-produtos">
+              <li class="nav-item-overlay">
+                <a class="nav-link link-produtos" href="#products">
                   Produtos
                 </a>
               </li>
-              <li class="nav-item-overlay" onclick="scrollar('#our-team')">
-                <a class="nav-link link-nosso-time">
+              <li class="nav-item-overlay">
+                <a class="nav-link link-nosso-time" href="#our-team">
                   Nosso time
                 </a>
               </li>
               <li class="nav-item-overlay">
-                <a class="nav-link link-rcpm" href="rcpm.html">
-                  RCPM
-                </a>
-              </li>
-              <li class="nav-item-overlay" onclick="scrollar('#footer')">
-                <a class="nav-link link-contatos">
+                <a class="nav-link link-contatos" href="#footer">
                   Contatos
                 </a>
               </li>
               <li class="nav-item-overlay btn-simule-rcpm">
-                <a class="nav-link link-simulacao" href="rcpm.html">
-                  <button class="btn"> SIMULE SEU RCPM </button>
+                <a class="link-simulacao" href="rcpm.html">
+                  <button class="btn"> RCPM </button>
                 </a>
               </li>
             </ul>
           </div>
 
+          <!-- for large devices -->
           <div class="navbar-collapse nav-container">
             <ul class="navbar-nav mb-2 mb-lg-0">
-              <li class="nav-item" onclick="scrollar('#about-us')">
-                <a class="nav-link link-about-us">
+              <li class="nav-item">
+                <a class="nav-link link-inicio" href="#inicio">
+                  Início
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link-about-us" href="#about-us">
                   Sobre nós
                 </a>
               </li>
-              <li class="nav-item" onclick="scrollar('#products')">
-                <a class="nav-link link-produtos">
+              <li class="nav-item">
+                <a class="nav-link link-produtos" href="#products">
                   Produtos
                 </a>
               </li>
-              <li class="nav-item" onclick="scrollar('#our-team')">
-                <a class="nav-link link-nosso-time">
+              <li class="nav-item">
+                <a class="nav-link link-nosso-time" href="#our-team">
                   Nosso time
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link link-rcpm" href="rcpm.html">
-                  RCPM
-                </a>
-              </li>
-              <li class="nav-item" onclick="scrollar('#footer')">
-                <a class="nav-link link-contatos">
+                <a class="nav-link link-contatos" href="#footer">
                   Contatos
                 </a>
               </li>
-              <li class="nav-item btn-simule-rcpm">
-                <a class="nav-link link-simulacao" href="rcpm.html">
-                  <button class="btn"> SIMULE SEU RCPM </button>
+              <li class="nav-item btn-personalizado">
+                <a href="rcpm.html" style="text-decoration: none;">
+                  RCPM
                 </a>
               </li>
             </ul>
@@ -109,19 +123,22 @@
     </header>
 
     <main>
-      <section class="saiba-mais" style="background-image: url('./assets/images/backgrounds/initial_background-hero.png')" id="inicio">
-        <span class="seja-bravo"> SEJA BRAVO </span>
+      <section class="saiba-mais anime" style="background-image: url('./assets/images/backgrounds/initial_background-hero.png')" id="inicio">
+        <div class="background-effect"></div>
+        <div class="saiba-mais-container">
+          <span class="seja-bravo"> SEJA BRAVO </span>
 
-        <span class="specialty-description">
-          Especialista em Soluções de Seguros para a Construção Civil
-        </span>
+          <span class="specialty-description">
+            Especialista em Soluções de Seguros para a Construção Civil
+          </span>
 
-        <button class="btn-saiba-mais" onclick="scrollar('#products')">
-          SAIBA MAIS
-        </button>
+          <button class="btn-saiba-mais" onclick="scrollar('#products')">
+            SAIBA MAIS
+          </button>
+        </div>
       </section>
 
-      <section class="about-us w-100" id="about-us">
+      <section class="about-us w-100 anime" id="about-us">
         <div class="d-flex simple-container">
           <div class="image-section">
             <img
@@ -156,7 +173,7 @@
         <div></div>
       </section>
 
-      <section class="produtos" id="products">
+      <section class="produtos w-100   anime" id="products">
         <div class="especialidades-container">
           <span class="title-section">
             <h1> Especialidades Bravo </h1>
@@ -226,13 +243,11 @@
         </div>
       </section>
 
-      <section class="nosso-time" id="our-team">
+      <section class="nosso-time w-100 anime" id="our-team">
         <div class="d-flex simple-container">
-          <div class="image-section">
-            <img
-              src="./assets/images/img-map.png"
-              alt="Map"
-            />
+          <!-- <div id="mapid"></div> -->
+          <div>
+            <iframe class='iframe-bravo' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4006.1501628793153!2d-46.569209434563184!3d-23.5405807751263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ab055150275b3%3A0x7a46da1cfa370971!2sBravo%20Brasil%20Seguros!5e0!3m2!1spt-BR!2sbr!4v1674941024083!5m2!1spt-BR!2sbr" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
           <div class="description">
@@ -249,7 +264,7 @@
         </div>
       </section>
 
-      <section class="networks-bravo" id="networks-bravo">
+      <section class="networks-bravo w-100 anime" id="networks-bravo">
         <div class="network-container">
           <span class="title-section">
             <h1> A Bravo nas redes </h1>
@@ -294,7 +309,7 @@
       </section>
 
       <footer id="footer">
-        <a class="back-to-top" onclick="scrollar('#inicio');">
+        <a class="back-to-top nav-link" href="#inicio">
           <i class="fa fa-chevron-up chevron-up"></i>
         </a>
 
@@ -340,6 +355,7 @@
     <script type="text/javascript" src="./assets/scripts/swiper.js"></script>
     <script type="text/javascript" src="./assets/scripts/changeLink.js"></script>
     <script type="text/javascript" src="./assets/scripts/menuResponsive.js"></script>
+    <script type="text/javascript" src="./assets/scripts/leaflet.js"></script>
 
     <!-- my scripts-->
     <script type="text/javascript">

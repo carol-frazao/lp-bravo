@@ -23,10 +23,34 @@ header {
         }
     }
 
+    .btn-personalizado {
+        display: flex;
+        align-items: center;
+        padding-right: 5px;
+        margin-left: 8px;
+
+        a {
+            background-color: $orange;
+            border-radius: 5px 10px;
+            padding: 5px !important;
+            font-size: 14px;
+            transition: .2s;
+            font-weight: 500;
+
+            &:hover {
+                box-shadow: 0 0 2px 1px rgba(205, 205, 205, 0.452);
+                color: white !important;
+                transform: scale(.9);
+                -webkit-transform: scale(.9);
+                -moz-transform: scale(.9);
+            }
+        }
+    }
+
     .nav-container {
         display: flex;
         align-items: center;
-        justify-content: end;
+        justify-content: flex-end;
 
         @include for-max-lg {
             .navbar-nav {
@@ -58,7 +82,6 @@ header {
 }
 
 .btn-simule-rcpm {
-    margin-left: 10px;
     @include flex-center;
     @include for-max-lg {
         width: 100% !important;

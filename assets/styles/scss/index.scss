@@ -98,3 +98,52 @@ body {
         }
     }
 }
+
+.background-effect {
+    height: 100%;
+    width: 500%;
+    display: flex;
+    align-items: center;
+    background-size: 500% 300%;
+    position: absolute;
+    background: linear-gradient(45deg, #7285d329, #8ea6e91a, #9a8c761a, #65513b22);
+    animation: colors 6s infinite alternate-reverse;
+
+    @keyframes colors {
+        0% {
+            left: -400%;
+        }
+        50% {
+            left: 0;
+        }
+        100% {
+            left: -400%;
+        }
+    }
+}
+
+.iframe-bravo {
+    min-width: 250px;
+    min-height: 250px;
+
+    @include for-min-lg {
+        width: 500px;
+        height: 350px;
+    }
+    @include for-max-lg {
+        width: 70%;
+    }
+    @include for-max-md {
+        width: 100%;
+    }
+}
+.anime {
+	opacity: 0;
+	transform: translate3d(-100px,0,0);
+	transition: .2s;
+}
+
+.anime-start {
+	opacity: 1;
+	transform: translate3d(0,0,0);
+}

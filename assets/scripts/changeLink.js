@@ -1,3 +1,4 @@
+const linkInicio = document.querySelectorAll('.link-inicio')
 const linkAbout = document.querySelectorAll('.link-about-us')
 const linkProdutos = document.querySelectorAll('.link-produtos')
 const linkOurTeam = document.querySelectorAll('.link-nosso-time')
@@ -21,6 +22,7 @@ const changeLink = (links) => {
     })
 }
 
+changeLink(linkInicio)
 changeLink(linkAbout)
 changeLink(linkProdutos)
 changeLink(linkOurTeam)

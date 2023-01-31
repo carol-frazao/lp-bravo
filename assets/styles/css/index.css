@@ -225,10 +225,31 @@ header {
 .navbar-header .navbar-toggler svg.feather-menu-icon:hover {
   color: #ff9f43;
 }
+.navbar-header .btn-personalizado {
+  display: flex;
+  align-items: center;
+  padding-right: 5px;
+  margin-left: 8px;
+}
+.navbar-header .btn-personalizado a {
+  background-color: #ff9f43;
+  border-radius: 5px 10px;
+  padding: 5px !important;
+  font-size: 14px;
+  transition: 0.2s;
+  font-weight: 500;
+}
+.navbar-header .btn-personalizado a:hover {
+  box-shadow: 0 0 2px 1px rgba(205, 205, 205, 0.452);
+  color: white !important;
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+}
 .navbar-header .nav-container {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
 @media (max-width: 992px) {
   .navbar-header .nav-container .navbar-nav {
@@ -256,7 +277,6 @@ header {
   }
 }
 .btn-simule-rcpm {
-  margin-left: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -377,20 +397,31 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.saiba-mais .saiba-mais-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
   flex-direction: column;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  overflow: hidden;
 }
-.saiba-mais span.seja-bravo {
+.saiba-mais .saiba-mais-container span.seja-bravo {
   color: #ff9f43;
   font-weight: 500;
   letter-spacing: 7px;
   font-size: 14px;
   transition: 0.2s;
 }
-.saiba-mais span.specialty-description {
+.saiba-mais .saiba-mais-container span.specialty-description {
   color: #fff;
   font-size: 50px;
   width: 70%;
@@ -400,22 +431,22 @@ header {
   font-size: 50px;
 }
 @media (max-width: 1200px) {
-  .saiba-mais span.specialty-description {
+  .saiba-mais .saiba-mais-container span.specialty-description {
     font-size: 45px;
   }
 }
 @media (max-width: 992px) {
-  .saiba-mais span.specialty-description {
+  .saiba-mais .saiba-mais-container span.specialty-description {
     font-size: 32px;
   }
 }
 @media (max-width: 576px) {
-  .saiba-mais span.specialty-description {
+  .saiba-mais .saiba-mais-container span.specialty-description {
     width: auto;
     font-size: 24px;
   }
 }
-.saiba-mais button.btn-saiba-mais {
+.saiba-mais .saiba-mais-container button.btn-saiba-mais {
   font-size: 14px;
   font-weight: 400;
   color: #fff;
@@ -426,8 +457,10 @@ header {
   transition: 0.4s all;
   box-shadow: 1px 1px 2px rgba(59, 59, 59, 0.381);
   border-radius: 1px;
+  position: relative;
+  z-index: 1;
 }
-.saiba-mais button.btn-saiba-mais:hover {
+.saiba-mais .saiba-mais-container button.btn-saiba-mais:hover {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
@@ -581,14 +614,14 @@ header {
 
 .rcpm {
   min-height: 100vh;
-  height: 100%;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   align-items: center;
-  padding-left: 10%;
+  position: relative;
+  overflow: hidden;
 }
 @media (max-width: 576px) {
   .rcpm {
@@ -599,6 +632,7 @@ header {
   display: flex;
   flex-direction: column;
   width: 30rem;
+  padding-left: 10%;
 }
 @media (min-width: 1440px) {
   .rcpm .rcpm-container {
@@ -703,11 +737,14 @@ header {
   transition: 0.4s all;
   box-shadow: 1px 1px 2px rgba(87, 87, 87, 0.326);
   border-radius: 1px;
+  position: relative;
+  z-index: 1;
 }
 .btn-simular-rcpm:hover {
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.222);
 }
 
 .rcpm-coberturas {
@@ -803,13 +840,34 @@ header {
     width: 60%;
   }
 }
-.simulacao-rcpm .simulacao-container .form-simulacao input, .simulacao-rcpm .simulacao-container .form-simulacao select {
+.simulacao-rcpm .simulacao-container .form-simulacao .input-group {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.simulacao-rcpm .simulacao-container .form-simulacao .input-group input, .simulacao-rcpm .simulacao-container .form-simulacao .input-group select {
   width: 100%;
   outline: none;
   border: none;
   padding: 7px 15px;
   margin-bottom: 10px;
   border-radius: 5px;
+}
+.simulacao-rcpm .simulacao-container .form-simulacao .input-group svg {
+  color: #f6f6f6;
+  background-color: #ea5455;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  right: -10px;
+  top: 5px;
+  transition: 0.2s all;
+}
+.simulacao-rcpm .simulacao-container .form-simulacao .input-group svg:hover {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.222);
 }
 .simulacao-rcpm .simulacao-container .form-simulacao button {
   width: 100%;
@@ -819,6 +877,29 @@ header {
 .simulacao-rcpm .simulacao-container .form-simulacao button:hover {
   transform: none !important;
   box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.222);
+}
+
+#resultContainer {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  color: #f6f6f6;
+}
+#resultContainer hr {
+  width: 50%;
+  height: 2px;
+  margin: 6px 0 3px;
+}
+#resultContainer span.nextStep {
+  font-size: 14px;
+}
+#resultContainer .hiring {
+  display: flex;
+  gap: 1rem;
+}
+#resultContainer .hiring button {
+  background-color: #ff9f43 !important;
+  font-weight: 500;
 }
 
 footer {
@@ -1018,4 +1099,69 @@ body {
   .nosso-time .simple-container p {
     text-align: start !important;
   }
+}
+
+.background-effect {
+  height: 100%;
+  width: 500%;
+  display: flex;
+  align-items: center;
+  background-size: 500% 300%;
+  position: absolute;
+  background: linear-gradient(45deg, rgba(114, 133, 211, 0.1607843137), rgba(142, 166, 233, 0.1019607843), rgba(154, 140, 118, 0.1019607843), rgba(101, 81, 59, 0.1333333333));
+  animation: colors 6s infinite alternate-reverse;
+}
+@-webkit-keyframes colors {
+  0% {
+    left: -400%;
+  }
+  50% {
+    left: 0;
+  }
+  100% {
+    left: -400%;
+  }
+}
+@keyframes colors {
+  0% {
+    left: -400%;
+  }
+  50% {
+    left: 0;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
+.iframe-bravo {
+  min-width: 250px;
+  min-height: 250px;
+}
+@media (min-width: 992px) {
+  .iframe-bravo {
+    width: 500px;
+    height: 350px;
+  }
+}
+@media (max-width: 992px) {
+  .iframe-bravo {
+    width: 70%;
+  }
+}
+@media (max-width: 768px) {
+  .iframe-bravo {
+    width: 100%;
+  }
+}
+
+.anime {
+  opacity: 0;
+  transform: translate3d(-100px, 0, 0);
+  transition: 0.2s;
+}
+
+.anime-start {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }

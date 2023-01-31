@@ -1,6 +1,12 @@
 const uf = document.getElementById('estados')
 const cidade = document.getElementById('municipios')
 
+// cidade.disabled = true;
+
+if (!uf.value) {
+    cidade.disabled = true;
+}
+
 window.addEventListener('load', async () => {
     const request = await fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados');
     const response = await request.json();
@@ -22,5 +28,6 @@ uf.addEventListener("change", async () => {
     response.forEach((cities) => {
         options += '<option>' + cities.nome + '</option>'
     })
-    cidade.innerHTML = options
+    cidade.innerHTML = options;
+    cidade.disabled = false;
 })
