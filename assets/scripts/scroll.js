@@ -4,18 +4,16 @@ const scrollar = (section) => {
   $("html, body").animate({ scrollTop: target_top - 100}, 0);
 };
 
-
 $('.nav-link').click(function(e){
 	e.preventDefault();
 	var id = $(this).attr('href'),
-			targetOffset = $(id).offset().top,
-			menuHeight = $('header').innerHeight();
+		targetOffset = $(id).offset().top,
+		menuHeight = $('header').innerHeight();
 
     $('html, body').animate({
       scrollTop: targetOffset - menuHeight
-    }, 0);
+    }, 100);
 });
-
 
 // Debounce do Lodash
 debounce = function(func, wait, immediate) {
@@ -36,13 +34,13 @@ debounce = function(func, wait, immediate) {
 // Animação ao Scroll
 (function(){
 	var $target = $('.anime'),
-			animationClass = 'anime-start',
-			offset = $(window).height() * 3/4;
+		animationClass = 'anime-start',
+		offset = $(window).height() * 3/4;
 
 	function animeScroll() {
 		var documentTop = $(document).scrollTop();
 
-		$target.each(function(){
+		$target.each(function() {
 			var itemTop = $(this).offset().top;
 			if (documentTop > itemTop - offset) {
 				$(this).addClass(animationClass);
@@ -56,5 +54,5 @@ debounce = function(func, wait, immediate) {
 
 	$(document).scroll(debounce(function(){
 		animeScroll();
-	}, 16));
+	}, 17));
 })();
