@@ -1,7 +1,7 @@
 const uf = document.getElementById('estados')
 const cidade = document.getElementById('municipios')
 
-// cidade.disabled = true;
+const getSequence = (list) => list.sort((a, b) => a.sequence - b.sequence)
 
 if (!uf.value) {
     cidade.disabled = true;
@@ -12,9 +12,13 @@ window.addEventListener('load', async () => {
     const response = await request.json();
     const options = document.createElement("optgroup")
 
-    response.forEach((uf) => {
+    const estadosOrdenados = response.sort(function(a, b) {
+        return a.sigla < b.sigla ? -1 : a.sigla > b.sigla ? 1 : 0;
+    });
+
+    estadosOrdenados.forEach((uf) => {
         options.innerHTML += '<option>' + uf.sigla + '</option>'
-        options.setAttribute('label', 'Selecione')
+        options.setAttribute('label', 'UF')
     })
     uf.append(options)
 });

@@ -26,7 +26,7 @@
         }
     }
     @include for-max-md {
-        .about-us-description {
+        .description {
             max-width: 100%;
         }
     }
@@ -34,10 +34,10 @@
         gap: 1rem;
         padding: 2.5rem;
 
-        .about-us-image img {
+        .image-section img {
             padding: 10px;
         }
-        .about-us-description {
+        .description {
             h1 {
                 font-size: 25px;
                 padding-bottom: 0;
@@ -74,14 +74,16 @@
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-}
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin-bottom: 2.2rem;
+    img, video {
+        user-select: none;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-bottom: 2.2rem;    
+    }
 }
 
 .swiper-button-prev, .swiper-button-next {

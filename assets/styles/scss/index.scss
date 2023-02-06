@@ -122,21 +122,29 @@ body {
     }
 }
 
-.iframe-bravo {
-    min-width: 250px;
-    min-height: 250px;
+.mapa-bravo {
+    .description p {
+        @include for-max-md {
+        text-align: center !important;
+        }
+    }
+    .iframe-bravo {
+        min-width: 250px;
+        min-height: 250px;
 
-    @include for-min-lg {
-        width: 500px;
-        height: 350px;
-    }
-    @include for-max-lg {
-        width: 70%;
-    }
-    @include for-max-md {
-        width: 100%;
+        @include for-min-lg {
+            max-width: 500px;
+            max-height: 350px;
+        }
+        @include for-max-lg {
+            width: 70%;
+        }
+        @include for-max-md {
+            width: 100%;
+        }
     }
 }
+
 .anime {
 	opacity: 0;
 	transform: translate3d(-100px,0,0);

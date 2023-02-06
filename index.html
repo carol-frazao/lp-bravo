@@ -244,11 +244,10 @@
       </section>
 
       <section class="nosso-time w-100 anime" id="our-team">
-        <div class="d-flex simple-container">
-          <!-- <div id="mapid"></div> -->
-          <div>
-            <iframe class='iframe-bravo' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4006.1501628793153!2d-46.569209434563184!3d-23.5405807751263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ab055150275b3%3A0x7a46da1cfa370971!2sBravo%20Brasil%20Seguros!5e0!3m2!1spt-BR!2sbr!4v1674941024083!5m2!1spt-BR!2sbr" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
+        <div class="d-flex simple-container mapa-bravo">
+
+          <!-- <div id="map" class="iframe-bravo"></div> -->
+          <iframe class="iframe-bravo" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.7747852775815!2d-46.569281985099465!3d-23.540601384693222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ab055150275b3%3A0x7a46da1cfa370971!2sBravo%20Brasil%20Seguros!5e0!3m2!1spt-BR!2sbr!4v1675702640310!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
           <div class="description">
             <span class="title-section">
@@ -258,8 +257,11 @@
               A Bravo Brasil atua de Norte a Sul do país para melhor te atender.
             </p>
             <p>
-              Clique no mapa e escolha a sua região para encontrar o parceiro mais próximo.
+              Nossa sede está localizada na R. Itapura, 239 - Vila Gomes Cardim, São Paulo/SP - CEP 03310-000.
             </p>
+            <!-- <p>
+              Clique no mapa e escolha a sua região para encontrar o parceiro mais próximo.
+            </p> -->
           </div>
         </div>
       </section>
@@ -270,37 +272,9 @@
             <h1> A Bravo nas redes </h1>
           </span>
 
-          <!-- Swiper -->
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="./assets/images/feed/feed-bravo-1.png" alt="feed-bravo">
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/feed/feed-bravo-2.png" alt="feed-bravo">
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/feed/feed-bravo-3.png" alt="feed-bravo">
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/feed/feed-bravo-4.png" alt="feed-bravo">
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/feed/feed-bravo-5.png" alt="feed-bravo">
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/feed/feed-bravo-6.png" alt="feed-bravo">
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/feed/feed-bravo-7.png" alt="feed-bravo">
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/feed/feed-bravo-8.png" alt="feed-bravo">
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/images/feed/feed-bravo-9.png" alt="feed-bravo">
-              </div>
-            </div>
+          <!-- Swiper  2 -->
+          <div class="swiper mySwiper" id="swiper">
+            <div class="swiper-wrapper"></div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
@@ -333,18 +307,18 @@
             &#169; Bravo Brasil Corretora de Seguros
           </span>
         </div>
+
+        <div class="whatsapp">
+          <a
+            href="https://wa.me/557988091188"
+            class="whatsapp-icon-fixed"
+            target="_blank"
+          >
+            <i style="margin-top: 16px" class="fa fa-whatsapp"></i>
+          </a>
+        </div>
+
       </footer>
-
-      <div class="whatsapp">
-        <a
-          href="https://wa.me/557988091188"
-          class="whatsapp-icon-fixed"
-          target="_blank"
-        >
-          <i style="margin-top: 16px" class="fa fa-whatsapp"></i>
-        </a>
-      </div>
-
     </main>
 
     <!-- imports -->
@@ -355,7 +329,8 @@
     <script type="text/javascript" src="./assets/scripts/swiper.js"></script>
     <script type="text/javascript" src="./assets/scripts/menuResponsive.js"></script>
     <script type="text/javascript" src="./assets/scripts/changeColor.js"></script>
-    <script type="text/javascript" src="./assets/scripts/leaflet.js"></script>
+    <script type="module" src="./assets/scripts/leaflet.js"></script>
+    <script type="text/javascript" src="./assets/scripts/feedInsta.js"></script>
 
     <!-- my scripts-->
     <script type="text/javascript">

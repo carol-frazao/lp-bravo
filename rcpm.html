@@ -211,70 +211,62 @@
 
           <form name="simulacao" class="form-simulacao" id="form">
             <div class="input-group">
-              <input
-              type="text"
-              id="name"
-              name="name"
-              class="inputRcpm"
-              placeholder="Seu nome"
-              onkeyup="showBtnName()"
-              onblur="showBtnName()"
-              onfocus="close2_3()"
-              onkeypress="return ApenasLetras(event,this);"
-              required
-              >
-              <i data-feather="x" id="closeName" style="display: none;" onclick="clearName()"></i>
-              <script>
-                const close2_3 = () => {
-                  showBtnValue()
-                  showBtnState()
-                }
-              </script>
+              <label for="name"> Nome </label>
+              <div class="d-flex">
+                <input
+                type="text"
+                id="name"
+                name="name"
+                class="inputRcpm"
+                placeholder="Seu nome"
+                onkeyup="showBtnName()"
+                onblur="showBtnName()"
+                onfocus="close2_3()"
+                onkeypress="return ApenasLetras(event,this);"
+                required
+                >
+                <i data-feather="x" id="closeName" style="display: none;" onclick="clearName()"></i>
+              </div>
             </div>
 
             <div class="input-group">
-              <input
-              type="text"
-              id="property-value"
-              name="property-value"
-              class="inputRcpm"
-              placeholder="Valor do imóvel"
-              onkeyup="showBtnValue()"
-              onfocus="close1_3()"
-              onblur="showBtnValue()"
-              required
-              >
-              <i data-feather="x" id="closeValue" style="display: none;" onclick="clearValue()"></i>
-              <script>
-                const close1_3 = () => {
-                  showBtnName()
-                  showBtnState()
-                }
-              </script>
+              <label for="name"> Valor do imóvel </label>
+              <div class="d-flex">
+                <input
+                type="text"
+                id="property-value"
+                name="property-value"
+                class="inputRcpm"
+                placeholder="R$ 0,00"
+                onkeyup="showBtnValue()"
+                onfocus="close1_3()"
+                onblur="showBtnValue()"
+                required
+                >
+                <i data-feather="x" id="closeValue" style="display: none;" onclick="clearValue()"></i>
+              </div>
             </div>
 
             <div class="input-group">
-              <select
-              name="estados"
-              id="estados"
-              class="inputRcpm"
-              onchange="showBtnState()"
-              onblur="showBtnState()"
-              onfocus="close1_2()"
-              required
-              >
-                <option value='' disabled selected> Estado </option>
-              </select>
-              <i data-feather="x" id="closeState" style="display: none;" onclick="clearState()"></i>
-              <script>
-                const close1_2 = () => {
-                  showBtnName()
-                  showBtnValue()
-                }
-              </script>
+              <label for="name"> Estado </label>
+              <div class="d-flex">
+                <select
+                name="estados"
+                id="estados"
+                class="inputRcpm"
+                onchange="showBtnState()"
+                onblur="showBtnState()"
+                onfocus="close1_2()"
+                required
+                >
+                  <option value='' disabled selected> Selecione </option>
+                </select>
+                <i data-feather="x" id="closeState" style="display: none;" onclick="clearState()"></i>
+              </div>
             </div>
 
             <div class="input-group">
+              <label for="name"> Cidade </label>
               <select
               name="municipios"
               id="municipios"
@@ -290,7 +282,7 @@
           <div id="resultContainer" style="display: none;">
             <div id="resultado"></div>
             <hr/>
-            <span class="nextStep"> Qual o próximo passo?</span>
+            <span class="nextStep"> Qual o próximo passo? </span>
             <div class="hiring">
               <a href="http://testes.bravobrasilcorretora.com.br/rcpm" target="_blank">
                 <button  class="btn-simular-rcpm"> Contratar </button>
@@ -369,6 +361,21 @@
         renderResult();
       }
       form.addEventListener('submit', onSubmit);
+    </script>
+
+    <script>
+      const close2_3 = () => {
+        showBtnValue()
+        showBtnState()
+      }
+      const close1_3 = () => {
+        showBtnName()
+        showBtnState()
+      }
+      const close1_2 = () => {
+        showBtnName()
+        showBtnValue()
+      }
     </script>
 
     <script>
